@@ -44,8 +44,8 @@ public class ProdutoController {
         return  produtoService.buscarProdutoId(id);
     }
 
-    @PutMapping("/{id}") // usado para mapear requisições HTTP PUT para um método específico de um Controller,
-                         // sendo o padrão para atualizar recursos existentes.
+    @PutMapping("/{id}") /* usado para mapear requisições HTTP PUT para um método específico de um Controller,
+                          sendo o padrão para atualizar recursos existentes.*/
     public ResponseEntity <ProdutoModel> atualizarProdutos(@PathVariable Long id, @RequestBody ProdutoModel ProdutoModel){
         ProdutoModel requeste = produtoService.atualizarProduto(id, ProdutoModel);
         return  ResponseEntity.ok().body(requeste);
